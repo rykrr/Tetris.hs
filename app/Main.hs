@@ -117,11 +117,11 @@ data Action = Quit | ActionDown | ActionRight | ActionLeft | ActionClockwise | A
 keyEventMap :: [(Event, Action)]
 keyEventMap =
   [ (EventCharacter '`', Quit),
-    (EventCharacter '\'', ActionCounterClockwise),
-    (EventCharacter '.', ActionClockwise),
+    (EventCharacter 'q', ActionCounterClockwise),
+    (EventCharacter 'e', ActionClockwise),
     (EventCharacter 'a', ActionLeft),
-    (EventCharacter 'o', ActionDown),
-    (EventCharacter 'e', ActionRight)
+    (EventCharacter 's', ActionDown),
+    (EventCharacter 'd', ActionRight)
   ]
 
 getAction :: Window -> Maybe Integer -> Curses (Maybe Action)
